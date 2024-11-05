@@ -211,3 +211,79 @@ section.top ul a:hover{
     font-weight: bold;
     color: #009879;
 }
+
+/* tablets */
+@media (max-width: 1400px) {
+    header {
+        display: flex;
+    }
+
+    nav {
+        width: 60px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: transparent;
+    }
+
+    nav ul a {
+        font-size: 12px;
+        padding: 0px;
+    }
+
+    nav ul a span {
+        display: none;
+    }
+
+    main {
+        margin-left: 60px;
+        padding: 30px;
+        overflow-y: auto;
+        min-height: 100vh; 
+    }
+
+    .recent-order {
+        padding-top: 30px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 500px) {
+    .Recent-orders-table {
+        overflow-x: auto;
+        margin-top: 20px;
+    }
+
+    section.top ul a{
+        font-size: 25px;
+    }
+
+    .Recent-orders-table table {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .Recent-orders-table table th, 
+    .Recent-orders-table table td {
+        padding: 5px 8px;
+        font-size: 8px;
+    }
+
+    .Recent-orders-table table th:nth-child(5),
+    .Recent-orders-table table td:nth-child(5),
+    .Recent-orders-table table th:nth-child(6),
+    .Recent-orders-table table td:nth-child(6),
+    .Recent-orders-table table th:nth-child(7),
+    .Recent-orders-table table td:nth-child(7) {
+        display: none;
+    }
+
+    .Recent-orders-table table th, .Recent-orders-table table td {
+        text-align: center;
+        white-space: nowrap;
+    }
+}

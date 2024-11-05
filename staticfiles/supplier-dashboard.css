@@ -34,3 +34,23 @@
 .post-message span {
     background: transparent;
 }
+
+@media (max-width: 1400px){
+    .accept-btn {
+        padding: 4px;
+        width: 50px;
+        font-size: 8px;
+    }
+    
+    .reject-btn {
+        padding: 4px;
+        width: 50px;
+        font-size: 8px;
+    }
+    
+    .reject-dropdown {
+        padding: 4px;
+        width: 50px;
+        font-size: 8px;
+    }
+}

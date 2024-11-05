@@ -1,0 +1,149 @@
+.title{
+    display: flex;
+    justify-content: center;
+    color: #ff7300;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: "Montserrat";
+}
+
+.section-divider{
+    width: 96%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, rgb(255, 30, 0), rgb(255, 230, 0));
+    border: none;
+}
+
+.about-info{
+    padding-bottom: 40px;
+}
+
+.about-main{
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    padding: 50px;
+}
+
+.menu-1{
+    display: flex;
+}
+
+.menu-2{
+    display: flex;
+}
+
+.menu-1 img{
+    width: 500px;
+    border-radius: 10px;
+    border-right: 1px solid #fff;
+}
+
+.menu-2 img{
+    width: 500px;
+    border-radius: 10px;
+    border-left: 1px solid #fff;
+}
+
+.infos{
+    display: flex;
+    color: #ff7300;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: "Montserrat";
+    padding-left: 40px;
+}
+
+.paragraphs{
+    display: flex;
+    padding: 40px;
+    padding-bottom: 10px;
+    font-family: "Montserrat";
+    flex-direction: column;
+}
+
+.paragraphs a {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    width: 400px;
+    margin-top: 20px;
+    background-image: linear-gradient(to right, rgb(255, 30, 0), rgb(255, 230, 0));
+    background-size: 200%;
+    background-position: left;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    font-size: 20px;
+    font-family: "Montserrat";
+    text-decoration: none;
+    color: #000000;
+}
+
+.paragraphs a:hover {
+    background-position: right;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* tablet */
+@media (max-width: 1400px){
+    .menu-1 img{
+        width: 400px;
+    }
+    
+    .menu-2 img{
+        width: 400px;
+    }
+}
+
+/* mobile */
+@media (max-width: 1000px){
+    .title{
+        font-size: 15px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    
+    .about-main{
+        display: none;
+    }
+
+    .infos{
+        font-size: 12px;
+        padding-left: 20px;
+    }
+    
+    .paragraphs{
+        padding: 20px;
+    }
+
+    .paragraphs h1{
+        font-size: 14px;
+    }
+    .paragraphs p{
+        font-size: 12px;
+    }
+    
+    .paragraphs a {
+        padding: 10px 10px;
+        width: 250px;
+        font-size: 12px;
+    }
+}

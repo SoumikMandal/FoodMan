@@ -122,3 +122,69 @@ section.menu-item-section .add-to-cart-button{
     padding-left: 45px;
     color: #eeff00;
 }
+
+@media (max-width: 1400px){
+    .title{
+        font-size: 9px;
+    }
+
+    .partner{
+        padding: 10px;
+    }
+
+    .messages{
+        padding: 10px;
+        font-size: 9px;
+    }
+    
+    section.menu-item-section{
+        min-height: 30vh;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding: 0px;
+    }
+
+    select#company{
+        font-size: 9px;
+    }
+    
+    form button{
+        font-size: 9px;
+    }
+
+    .menu-items{
+        height: 150px;
+        width: 100px;
+        border-radius: 5px;
+        padding: 2px;
+        margin: 10px;
+    }
+
+    .menu-items h4{
+        font-size: 8px;
+        padding: 5px;
+    }
+
+    .item_description p{
+        font-size: 8px;
+        padding: 5px;
+    }
+
+    .input-quantity{
+        padding: 0px;
+    }
+
+    .input-quantity input{
+        width: 20px;
+        font-size: 8px;
+    }
+
+    .menu-items form label{
+        font-size: 8px;
+        padding: 5px;
+    }
+
+    .item-image{
+        height: 80px;
+    }
+}

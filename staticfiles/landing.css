@@ -15,7 +15,7 @@ nav {
     display: flex;
     justify-content:space-between;
     opacity: 100%;
-    background: #000018;
+    background: #1d0700;
 }
 
 .Navbar a{
@@ -66,8 +66,6 @@ body{
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
 }
 
-
-
 .hero-section .Intro {
     position: relative;
 }
@@ -81,7 +79,7 @@ body{
 }
 
 .hero-section h2 span{
-    color: rgb(24, 255, 3);
+    color: rgb(255, 38, 0);
 }
 
 .hero-section p {
@@ -99,7 +97,7 @@ body{
     width: 400px;
     margin-top: 20px;
     margin-left: 60px;
-    background-color: rgb(30, 255, 0);
+    background-color: rgb(255, 38, 0);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -111,15 +109,45 @@ body{
 }
 
 .Intro a:hover {
-    background-color: rgba(0, 204, 255, 0.438)
+    background-color: rgba(255, 81, 0, 0.438)
+}
+
+.right{
+    position: relative;
+    left: 700px;
 }
 
 .right img {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 950px;
+    width: 500px;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOutDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.hero-section .Intro, .hero-section h2, .hero-section p, .Intro a, .right img {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
 
 .section-divider{
     width: 96%;
@@ -137,31 +165,28 @@ body{
     align-items: flex-start;
     justify-content: left;
     padding: 10px 10px;
-    background-color: #fff;
-    color: #000000;
+    background-color: #1b1b1b;
+    color: #ffffff;
     font-family: "Montserrat";
     padding-left: 40px;
 }
 
 .partners{
-    padding: 50px;
+    padding: 100px;
     display: flex;
-    min-height: 30vh;
-    max-height: 100vh;
     flex-wrap: wrap;
-    padding-left: 110px;
+    gap: 30px;
 }
 
 .partners-elements{
     display: flex;
-    margin: 30px;
     align-items: center;
     justify-content: center;
     width: 180px;
     height: 180px;
     background-color: #ffffff;
     border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 1);
 }
 
 .partners-pictures img{
@@ -171,7 +196,9 @@ body{
 /* ------------------------------------------footer---------------------------------------- */
 
 footer{
-    background: #000018;
+    bottom: 0;
+    width: 100%;
+    background: #1d0700;
 }
 
 footer a{
@@ -200,7 +227,6 @@ footer section li{
     display: flex;
     padding: 20px;
     font-family: "Montserrat";
-    display: flex;
     justify-content: center;
     color: #fff;
     font-size: 10px;
@@ -212,4 +238,146 @@ footer section li{
     margin-right: 17px;
     transition: all .40s ease;
 }
+
+/* tablet */
+@media (max-width: 1400px){
+    .hero-section {
+        min-height: 30vh;
+        justify-content: center;
+    }
+    
+    .hero-section .Intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .Intro a {
+        width: 300px;
+        margin-left: 0px;
+    }
+
+    .right{
+        display: none;
+    }
+    
+    .partners{
+        min-height: calc(45vh - 200px);
+        padding: 50px;
+        justify-content: space-evenly;
+    }
+    
+    .partners-elements{
+        width: 90px;
+        height: 90px;
+    }
+    
+    .partners-pictures img{
+        width: 80px;
+    }
+}
+
+/* mobile */
+@media (max-width: 550px){
+    .Navbar a{
+        font-size: 10px;
+        color: #ffffff;
+    }
+    
+    .logo {
+        padding-top: 5px;
+        width: 30px;
+        padding-left: 40px;
+    }
+    
+    .Navbar li {
+        display: inline-block;
+        padding: 10px 10px;
+    }
+
+    .hero-section {
+        min-height: 20vh;
+        justify-content: center;
+    }
+
+    .hero-section h2 {
+        font-size: 20px;
+    }
+    
+    .hero-section p {
+        font-size: 12px;
+    }
+    
+    .hero-section .Intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .Intro a {
+        width: 200px;
+        margin-left: 0px;
+        padding: 10px 10px;
+        font-size: 14px;
+    }
+
+    .right{
+        display: none;
+    }
+    
+    .partners{
+        min-height: calc(55vh - 200px);
+        padding: 50px;
+        justify-content: space-evenly;
+    }
+    
+    .partners-elements{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .partners-pictures img{
+        width: 50px;
+    }
+
+    .partner .partner_title h1{
+        font-size: 15px;
+        padding-left: 20px;
+    }
+    
+    footer a{
+        font-size: 11px;
+    }
+
+    .Social-links a{
+        font-size: 18px;
+    }
+
+    .footer-img img{
+        width: 40px;
+    }
+
+    .footer-img p{
+        font-size: 9px;
+    }
+
+    .Copyright{
+        font-size: 8px;
+    }
+
+    .useful-links{
+        display: none;
+    }
+
+    .Contact-us h4{
+        font-size: 12px;
+    }
+
+    .Contact-us p{
+        font-size: 9px;
+    }
+}
+
 

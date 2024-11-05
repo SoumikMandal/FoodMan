@@ -104,6 +104,7 @@ section{
 }
 
 .place-order a:hover{
+    cursor: pointer;
     background-color: #0059ff;
     font-weight: bold;
 }
@@ -163,6 +164,23 @@ section{
     font-size: 12px;
 }
 
+.details{
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    background: transparent;
+}
+
+.details input{
+    padding: 10px;
+    font-size: 14px;
+}
+
+.details input::placeholder {
+    color: #ffffff;
+    opacity: 0.5;
+}
+
 .default{
     display: flex;
     margin: 40px;
@@ -172,4 +190,11 @@ section{
     background-color: rgb(0, 140, 255);
     color: #ffffff;
     font-weight: bold;
+}
+
+
+@media (max-width: 1400px){
+    .cart {
+        width: 300px;
+    }
 }

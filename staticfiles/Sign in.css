@@ -189,3 +189,73 @@ body{
     font-size: 10px;
     text-align: center;
 }
+
+/* tablet */
+@media (max-width: 1400px){
+    .Authentication {
+        min-height: 90vh;
+    }
+    
+    .wrapper{
+        width: 300px;
+        height: 400px;
+    }
+    
+    .wrapper.active{
+        height: 500px;
+    }
+    
+    .form-box h2{
+        font-size: 1.5em;
+    }
+    
+    .input-box{
+        height: 50px;
+        margin: 10px 0px;
+    }
+    
+    .input-box label{
+        transform: translateY(0%);
+        font-size: 0.8em;
+    }
+    
+    .input-box input{
+        font-size: 0.8em;
+    }
+    
+    .choose-role label{
+        font-size: 12px;
+    }
+    
+    .choose-role select{
+        width: 80px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    .remember-forgot{
+        font-size: .6em;
+    }
+    
+    .remember-forgot a{
+        padding-top: 4px;
+    }
+    
+    .btn {
+        width: 100px;
+        height: 35px;
+        font-size: 1em;
+    }
+    
+    .login-register{
+        font-size: .6em;
+    }
+    
+    .messages{
+        font-size: 9px;
+    }
+}
+
+/* mobile */
+@media (max-width: 550px){
+}
