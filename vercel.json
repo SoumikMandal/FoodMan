@@ -6,8 +6,13 @@
     }],
     "routes": [
         {
+            "src": "/static/(.*)",
+            "dest": "/static/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "in_office_delivery/wsgi.py"
         }
     ]
 }
+
