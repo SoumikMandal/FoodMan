@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #1d2634;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Montserrat";
+}
+
+/* --------------------------------------------------------------------header------------------------------------------------------------------------------------------- */
+
+header{
+    display: flex;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    left: 0;
+    width: 250px;
+    overflow: hidden;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.8);
+    padding: 30px 30px;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul a{
+    position: relative;
+    color: rgb(161, 161, 161);
+    font-size: 14px;
+    display: table;
+    padding: 10px;
+}
+
+nav .fas{
+    position: relative;
+    width: 20px;
+    height: 40px;
+    top: 14px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav-item{
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+}
+
+.logout{
+    position: absolute;
+    bottom: 30px;
+}
+
+nav ul a:hover{
+    color: #fff;
+}
+
+/* -----------------------------------------------------main-------------------------------------------------------------------------------------------- */
+
+main {
+    margin-left: 250px;
+    padding: 30px;
+}
+
+section.top {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+section.top ul{
+    list-style: none;
+}
+
+
+section.top ul a{
+    color: rgb(161, 161, 161);
+    font-size: 30px;
+}
+
+section.top ul a:hover{
+    color: #fff;
+}
+
+.notifications{
+    display: flex;
+    margin: 20px 20px;
+    padding-top: 30px;
+}
+
+.notification{
+    width: 650px;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    color: #ffffff;
+    background-image: linear-gradient(to top, rgb(160, 1, 1), rgb(255, 0, 0));
+    border-radius: 10px;
+    font-size: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+}
+
+.recent-order{
+    padding-top: 30px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.notifications-table{
+    display: flex;
+    margin: 0px 20px;
+}
+
+.notifications-table table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.notifications-table table th{
+    background-color: rgb(168, 0, 0);
+    padding: 10px 10px;
+    color: #e6e6e6;
+    font-size: 12px;
+}
+
+.notifications-table table td{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    color: #1a1a1a;
+    font-size: 12px;
+}
+
+.Recent-orders-table{
+    display: flex;
+    margin-top: 40px;
+}
+
+.Recent-orders-table table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+
+.Recent-orders-table table th{
+    background-color: rgb(0, 76, 138);
+    padding: 10px 10px;
+    color: #e0e0e0;
+    font-size: 12px;
+}
+
+.Recent-orders-table table td{
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    color: #1a1a1a;
+    font-size: 12px;
+}
+
+.Recent-orders-table table td.A{
+    color: #3ea125;
+}
+.Recent-orders-table table td.R{
+    color: #ff0000;
+}
+
+.content-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    text-align: center;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 15px;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.Recent-orders-table .content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+/* tablets */
+@media (max-width: 1400px) {
+    header {
+        display: flex;
+    }
+
+    nav {
+        width: 60px;
+        padding: 20px;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: transparent;
+    }
+
+    nav ul a {
+        font-size: 12px;
+        padding: 0px;
+    }
+
+    nav ul a span {
+        display: none;
+    }
+
+    main {
+        margin-left: 60px;
+        padding: 30px;
+        overflow-y: auto;
+        min-height: 100vh; 
+    }
+
+    .recent-order {
+        padding-top: 30px;
+        padding-left: 10px;
+        color: #fff;
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 500px) {
+    .Recent-orders-table {
+        overflow-x: auto;
+        margin-top: 20px;
+    }
+
+    section.top ul a{
+        font-size: 25px;
+    }
+
+    .Recent-orders-table table {
+        width: 100%;
+        font-size: 10px;
+    }
+
+    .Recent-orders-table table th, 
+    .Recent-orders-table table td {
+        padding: 5px 8px;
+        font-size: 8px;
+    }
+
+    .Recent-orders-table table th:nth-child(5),
+    .Recent-orders-table table td:nth-child(5),
+    .Recent-orders-table table th:nth-child(6),
+    .Recent-orders-table table td:nth-child(6),
+    .Recent-orders-table table th:nth-child(7),
+    .Recent-orders-table table td:nth-child(7) {
+        display: none;
+    }
+
+    .Recent-orders-table table th, .Recent-orders-table table td {
+        text-align: center;
+        white-space: nowrap;
+    }
+}

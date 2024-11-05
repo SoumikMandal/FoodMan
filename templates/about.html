@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodMan-About</title>
+    <link rel="stylesheet" href="{% static 'landing.css' %}">
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <script src="/static/javascript/landing.js"></script>
+    <script src="/static/javascript/about.js"></script>
+
+    <link rel="shortcut icon" href="/static/media/favicon.png" type="image/png">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body style="background-color: #ffffff">
+    <header>
+        <nav>
+            <a href="/">
+                <img src="/static/media/logo.png" width="60" class="logo">
+            </a>
+                <ul class="Navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/For enterprises" style="color:#ffe600;">For Enterprises</a></li>
+                    <li><a href="/Sign in" style="color:rgb(255, 72, 0);">Sign In</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(255, 30, 0), rgb(255, 230, 0));">
+
+    <main class="main">
+        <div class="title fade-in">
+            <h2>About Us</h2>
+            <br>
+        </div>
+        <hr class="section-divider">
+        <section class="about-main">
+            <div class="menu-1">
+                <img src="/static/media/about-menu.png" alt="">
+            </div>
+            <div class="menu-2">
+                <img src="/static/media/about-menu2.png" alt="">
+            </div>
+        </section>
+
+        <section class="about-info">
+            <div class="infos fade-in">
+                <h2>For Enterprises</h2>
+                <br>
+            </div>
+            <hr class="section-divider fade-in">
+            <div class="paragraphs fade-in">
+                <h1>Enterprise admin panel</h1>
+                <br>
+                <p>The enterprise admin panel on the FoodMan website allows enterprises to manage their organization’s food delivery needs efficiently. Through this panel, companies can register employees and approved canteen suppliers, enabling employees to access convenient food delivery services within the office area. This streamlined system ensures that only verified users and suppliers participate, enhancing service quality and operational control within the organization.</p>
+                <br>
+                <p>You can find it by registering your enterprise in the for enterprises page and then logging in.</p>
+                <br>
+                <a href="For enterprises" class="fade-in">Check out the enterprises section</a>
+            </div>
+            <div class="infos fade-in">
+                <h2>For Suppliers</h2>
+                <br>
+            </div>
+            <hr class="section-divider fade-in">
+            <div class="paragraphs fade-in">
+                <h1>Supplier profile</h1>
+                <br>
+                <p>After logging in, suppliers are redirected to their dashboard, where they can complete their profile with essential details like a unique ID, address, and phone number. This ensures their profile is accurately registered for FoodMan’s services. Additionally, suppliers have the option to change their password for added security, making it easy to keep their profile up-to-date and secure.</p>
+            </div>
+            <div class="paragraphs fade-in">
+                <h1>Supplier dashboard</h1>
+                <br>
+                <p>The supplier dashboard serves as the central hub for managing new orders. When a new order message arrives, suppliers are immediately notified and presented with the option to either accept or reject it. If they choose to reject an order, a dropdown menu provides a list of predefined reasons to select from, ensuring clear communication with both the client and the FoodMan team. This streamlined process allows suppliers to manage orders efficiently while keeping all parties informed.</p>
+            </div>
+            <div class="paragraphs fade-in">
+                <h1>Supplier menu view</h1>
+                <br>
+                <p>In the supplier dashboard, the menu section displays all items available for employees to choose from, providing suppliers with a clear view of their current offerings. This section allows suppliers to review, update, and manage the items they have listed, ensuring that employees always have accurate, up-to-date options to select from when ordering. This streamlined view helps suppliers track their offerings and maintain alignment with the demand within the office area.</p>
+            </div>
+            <div class="paragraphs fade-in">
+                <h1>Supplier order history</h1>
+                <br>
+                <p>The order history section provides suppliers with a comprehensive record of all orders placed to date. This section allows suppliers to view detailed information on past orders, including order dates, items ordered, and order statuses. By having access to this historical data, suppliers can track patterns in employee preferences, manage inventory, and ensure they meet demand effectively, all while maintaining a clear record of their transaction history with the office.</p>
+                <br>
+                <a href="Sign in" class="fade-in">Check out the suppliers section</a>
+            </div>
+            <div class="infos fade-in">
+                <h2>For Users</h2>
+                <br>
+            </div>
+            <hr class="section-divider fade-in">
+            <div class="paragraphs fade-in">
+                <h1>User profile</h1>
+                <br>
+                <p>The employee user profile on the FoodMan website is designed for streamlined order placement and personalization. It requires employees to enter and maintain up-to-date information, including their unique ID, address, and phone number. The unique ID is particularly important as it serves as a reference for all food orders placed within the system, ensuring accurate identification and delivery tracking.</p>
+            </div>
+            <div class="paragraphs fade-in">
+                <h1>User dashboard</h1>
+                <br>
+                <p>The employee's dashboard on the FoodMan website provides a comprehensive overview of recent orders, offering real-time updates on each order's status. Employees can view whether their orders have been accepted or rejected, helping them stay informed about delivery progress and expected arrival times within the office. This convenient feature allows employees to track their orders effortlessly and make adjustments as needed.</p>
+            </div>
+            <div class="paragraphs fade-in">
+                <h1>User menu view</h1>
+                <br>
+                <p>The user menu on the FoodMan website displays a full list of items available in their company's canteen, making it easy for employees to browse and select meals. This section includes all the offerings available for order, tailored to the specific options provided by their workplace canteen, ensuring a seamless ordering experience directly within the office environment.</p>
+            </div>
+            <div class="paragraphs fade-in">
+                <h1>User order history</h1>
+                <br>
+                <p>The user order history section provides a comprehensive record of all past orders placed by the employee. This feature allows users to review previous meals, track past transactions, and manage their ordering habits over time, offering valuable insights into their order patterns within the office canteen system.</p>
+                <br>
+                <a href="Sign in" class="fade-in">Check out the users section</a>
+            </div>
+        </section>
+    </main>
+
+    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(255, 30, 0), rgb(255, 230, 0));">
+
+    <footer id="footer" class="footer">
+
+        <section class="footer-section">
+            <div class="footer-img" style="font-size: 13px;">
+                <img src="/static/media/logo.png" width="70">
+                <p>Don't let the hunger bother you.</p>
+                <br>
+    
+                <div class="Social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+    
+            <div class="useful-links" style="font-size: 13px;">
+                <h4>Useful Links</h4>
+                <br>
+                <li><a href="/">Home</a></li>
+            </div>
+    
+            <div class="Contact-us" style="font-size: 13px;">
+                <h4>Contact Us</h4>
+                <br>
+                  <p>Street no. 12, Ulhasnagar</p>
+                  <p>Mumbai</p>
+                  <p>India</p>
+                  <br>
+                  <p class="Phone"><strong>Phone:</strong> <span>+91 8159079694</span></p>
+                  <p><strong>Email:</strong> <span>Foodman@google.com</span></p>
+            </div>
+        </section>
+    
+        <div class="Copyright">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">FoodMan</strong> <span>All Rights Reserved</span></p>
+        </div>
+    
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="{% static 'user-dashboard.css' %}">
+    <link rel="stylesheet" href="{% static 'supplier-dashboard.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="/static/media/favicon.png" type="image/png">
+
+    <script src="/static/javascript/user-dashboard.js"></script>
+    <script src="/static/javascript/supplier-dashboard.js"></script>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/supplier-db-profile">
+                    <i class='fas bx bx-user'></i>
+                    <span class="nav-item">Profile</span>
+                </a></li>
+                <li><a href="/supplier-dashboard">
+                    <i class='fas bx bxs-dashboard'></i>
+                    <span class="nav-item">Dashboard</span>
+                </a></li>
+                <li><a href="/supplier-dashboard-menu">
+                    <i class='fas bx bx-food-menu'></i>
+                    <span class="nav-item">Menu</span>
+                </a></li>
+                <li><a href="/supplier-dashboard-order-history">
+                    <i class='fas bx bx-history'></i>
+                    <span class="nav-item">Order history</span>
+                </a></li>
+                <li><a href="/Sign in" class="logout">
+                    <i class='fas bx bx-log-out'></i>
+                    <span class="nav-item">Log out</span>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="Recent-orders">
+            <div class="recent-order">
+                <h2>Recent orders</h2>
+            </div>
+        </section>
+        <br>
+        <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(109, 109, 109));">
+        <section class="Recent-orders-table">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Items</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                        <th>Name of Employee</th>
+                        <th>Location to be delivered at</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if orders %}
+                        {% for order in orders %}
+                            <tr>
+                                <td>{{ order.order_id }}</td>
+                                <td>
+                                    {% for item in order.order_items %}
+                                        {{ item.name }}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    {% for item in order.order_items %}
+                                        {{ item.quantity }}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </td>
+                                <td>{{ order.status }}</td>
+                                <td>{{ order.name }}</td>
+                                <td>{{ order.address }}</td>
+                                <td>{{ order.ordered_at|time:"H:i:s" }}</td>
+                                <td>{{ order.ordered_at|date:"d-m-Y" }}</td>
+                                <td>
+                                    {% if order.status == 'pending' %}
+                                        <button id="accept-btn-{{ order.order_id }}" class="accept-btn" onclick="acceptOrder('{{ order.order_id }}')">Accept</button>
+                                        <button id="reject-btn-{{ order.order_id }}" class="reject-btn" onclick="rejectOrder('{{ order.order_id }}')">Reject</button>
+                                        <select id="reject-dropdown-{{ order.order_id }}" class="reject-dropdown">
+                                            <option value="Out of stock">Out of stock</option>
+                                            <option value="Wrong item">Wrong item</option>
+                                            <option value="Customer request">Customer request</option>
+                                        </select>
+                                    {% else %}
+                                        <div class="post-message">
+                                            <span>{{ order.status }}</span>
+                                        </div>
+                                    {% endif %}
+                                </td>                                                               
+                            </tr>
+                        {% endfor %}
+                    {% else %}
+                        <tr>
+                            <td colspan="7">No orders found</td>
+                        </tr>
+                    {% endif %}
+                </tbody>                
+            </table>
+        </section>
+    </main>
+</body>
+</html>
+

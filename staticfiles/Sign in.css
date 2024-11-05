@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap');
+
+body{
+    background-image: linear-gradient(to top, rgb(0, 5, 71), rgb(0, 82, 175));
+}
+
+.Authentication {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat";
+}
+
+.wrapper{
+    width: 400px;
+    height: 500px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: height .2s ease;
+    overflow: hidden;
+}
+
+.wrapper.active{
+    height: 600px;
+}
+
+.wrapper .form-box{
+    padding: 40px;
+}
+
+.wrapper .form-box.login{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+
+}
+
+.wrapper.active .form-box.register{
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.form-box h2{
+    font-size: 2em;
+    color: #00c3ca;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #ffffff;
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #00c3ca;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #00c3ca;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.choose-role label{
+    color: #00c3ca;
+}
+
+.choose-role select{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    background: transparent;
+    border: 2px solid #00f7ff;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-family: "Montserrat";
+    color: #00f7ff;
+}
+
+.remember-forgot{
+    font-size: .8em;
+    color: #fff;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #00f7ff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.butn {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    padding: 0 20px;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    background: #00858a8a;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: 500;
+    font-family: "Montserrat";
+}
+
+.login-register{
+    font-size: .8em;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a{
+    color: #00f7ff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+}
+
+.messages{
+    color: #ff0000;
+    font-family: "Montserrat";
+    font-size: 10px;
+    text-align: center;
+}

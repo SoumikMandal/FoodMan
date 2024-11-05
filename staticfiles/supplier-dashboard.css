@@ -1,0 +1,36 @@
+.accept-btn {
+    background-color: #15ff00;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reject-btn {
+    background-color: #ff0000;
+    padding: 5px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reject-dropdown {
+    background-color: #ff5858;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: 100px;
+    cursor: pointer;
+}
+
+.reject-dropdown option{
+    background-color: #ff5858;
+}
+
+.post-message{
+    background: transparent;
+}
+
+.post-message span {
+    background: transparent;
+}

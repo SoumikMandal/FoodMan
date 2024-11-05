@@ -1,0 +1,124 @@
+.title{
+    padding-top: 30px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.partner{
+    padding: 20px;
+}
+
+select#company{
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    background: transparent;
+    margin-right: 20px;
+}
+
+form button{
+    background: transparent;
+    font-size: 15px;
+    color: #fff;
+}
+
+form button:hover{
+    cursor: pointer;
+    color: #1eff00;
+}
+
+img{
+    width: 200px;
+    background-color: #fff;
+}
+
+.item-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+section.menu-item-section {
+    min-height: 100vh;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 30px;
+    box-shadow: 5px 5px 35px rgb(0, 0, 0, 1);
+}
+
+.menu-items h4{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.item_description p{
+    background-color: #fff;
+    padding: 10px;
+    color: #000000;
+}
+
+.menu-items form label{
+    background-color: #fff;
+}
+
+section.menu-item-section .add-to-cart-button{
+    display: flex;
+    padding-top: 15px;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-to-cart-button button{
+    background-color: #ff0000;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.add-to-cart-button button:hover{
+    background-color: #1eff00;
+    color: #000000;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.input-quantity{
+    background-color: #fff;
+    padding: 10px;
+}
+
+.input-quantity input{
+    background-color: #fff;
+    width: 80px;
+    text-align: center;
+}
+
+.endline p{
+    color: #ffffff;
+}
+
+.messages{
+    display: flex;
+    padding: 30px;
+    padding-left: 45px;
+    color: #eeff00;
+}

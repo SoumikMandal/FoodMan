@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodMan-Home</title>
+    <link rel="stylesheet" href="{% static 'landing.css' %}">
+    <script src="/static/javascript/landing.js"></script>
+
+    <link rel="shortcut icon" href="/static/media/favicon.png" type="image/png">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body style="background-color: #1b1b1b">
+    <header>
+        <nav>
+            <a href="/">
+                <img src="/static/media/logo.png" width="60" class="logo">
+            </a>
+                <ul class="Navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/About">About</a></li>
+                    <li><a href="/For enterprises" style="color:#ffe600;">For Enterprises</a></li>
+                    <li><a href="/Sign in" style="color:rgb(255, 72, 0);">Sign In</a></li>
+                </ul>
+        </nav>
+
+    </header>
+
+    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(255, 30, 0), rgb(255, 230, 0));">
+
+    <main class="main">
+
+        <section id="hero" class="hero-section">
+            <div class="Intro" data-aos="fade-up">
+                <h2>Welcome to
+                    <span><strong>FoodMan</strong></span>
+                </h2>
+                <p>Best in office food delivery service in India</p>
+                <a href="/Sign in">Get Started</a>
+            </div>
+
+            <div class="right">
+                <img src="{% static '/media/menu.png' %}">
+            </div>
+        </section>
+        <br>
+        <section id="partner" class="partner">
+            <div class="partner_title">
+                <h1 class="partner_intro_text">Our Partners</h1>
+            </div>
+            <hr class="section-divider">
+            <div class="partners">
+                {% for Partner in Partners %}
+                    <div class="partners-elements">
+                        <div class="partners-pictures">
+                            <img src="{{ Partner.image.url }}" alt="Partner Image">
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+
+    
+
+    <footer id="footer" class="footer">
+        <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(255, 30, 0), rgb(255, 230, 0));">
+        <section class="footer-section">
+            <div class="footer-img" style="font-size: 13px;">
+                <img src="/static/media/logo.png" width="70">
+                <p>Don't let the hunger bother you.</p>
+                <br>
+    
+                <div class="Social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+    
+            <div class="useful-links" style="font-size: 13px;">
+                <h4>Useful Links</h4>
+                <br>
+                <li><a href="/">Home</a></li>
+                <li><a href="/About">About</a></li>
+            </div>
+    
+            <div class="Contact-us" style="font-size: 13px;">
+                <h4>Contact Us</h4>
+                <br>
+                  <p>Street no. 12, Ulhasnagar</p>
+                  <p>Mumbai</p>
+                  <p>India</p>
+                  <br>
+                  <p class="Phone"><strong>Phone:</strong> <span>+91 8159079694</span></p>
+                  <p><strong>Email:</strong> <span>Foodman@google.com</span></p>
+            </div>
+        </section>
+    
+        <div class="Copyright">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">FoodMan</strong> <span>All Rights Reserved</span></p>
+        </div>
+    
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+
+    <link rel="shortcut icon" href="/static/media/favicon.png" type="image/png">
+    
+    {% csrf_token %}
+    <link rel="stylesheet" href="{% static 'add-to-cart.css' %}">
+    <script src="/static/javascript/add-to-cart.js"></script>
+</head>
+<body>
+    <section>
+        <div class="cart">
+            <div class="title">
+                <h2>Your Cart</h2>
+            </div>
+        
+            {% if cart %}
+            <div class="cart-outer-list">
+                <ul>
+                    {% for item in cart %}
+                    <div class="cart-list">
+                        <li>
+                            <div class="cart-variables">
+                                <div class="cart-var-form">
+                                    <form method="POST" action="{% url 'update_cart' item.item_id %}">
+                                        {% csrf_token %}
+                                        <div class="item-name">
+                                            {{ item.name }} -
+                                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" required>
+                                        <button type="submit">Change Quantity</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="remove">
+                                    <form method="POST" action="{% url 'remove_from_cart' item.item_id %}" style="display:inline;">
+                                        {% csrf_token %}
+                                        <div class="remove-button">
+                                            <button type="submit" class="remove-button">Remove</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 119, 255));">
+                            </div>
+                        </li>
+                    </div>
+                    {% endfor %}
+                </ul>
+                <div class="details">
+                    <input type="text" placeholder="Enter name">
+                    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 119, 255));">
+                    <input type="text" placeholder="Enter place to deliver at">
+                    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(0, 17, 255), rgb(0, 119, 255));">
+                </div>
+                <div class="place-order">
+                    <a href="#" data-url="{% url 'place_order' %}">Proceed to Checkout</a>
+                </div>                
+            </div>
+            {% else %}
+            <div class="default">
+                <p>Your cart is empty.</p>
+            </div>
+            {% endif %}
+            <div class="redirect">
+                <a href="{% url 'user_dashboard_menu' %}">Continue Shopping</a>
+            </div>
+            <div class="messages">
+                {% for msg in messages %}
+                    {{msg}}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+</body>
+</html>

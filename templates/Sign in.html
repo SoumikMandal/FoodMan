@@ -1,0 +1,164 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodMan-Sign In</title>
+    <link rel="stylesheet" href="{% static 'landing.css' %}">
+    <link rel="stylesheet" href="{% static 'Sign in.css' %}">
+
+    <link rel="shortcut icon" href="/static/media/favicon.png" type="image/png">
+
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+
+<body onload="getcookiedata()">
+    <header>
+        <nav>
+            <a href="/">
+                <img src="/static/media/logo.png" width="60" class="logo">
+            </a>
+                <ul class="Navbar">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/About">About</a></li>
+                    <li><a href="/For enterprises" style="color:#ffe600;">For Enterprises</a></li>
+                </ul>
+        </nav>
+
+    </header>
+
+    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(51, 255, 0), rgb(0, 119, 255));">
+
+    <main>
+        <section class="Authentication">
+            <div class="wrapper">
+                <div class="form-box login">
+                    <h2>Login</h2>
+                    <form action="{% url 'login' %}" method="post">
+                        {% csrf_token %}
+                        <div class="input-box">
+                            <input type="text" name="Username" id="Username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="Password" id="Password" required>
+                            <label>Password</label>
+                        </div>
+                        <div class="choose-role">
+                            <label for="role">Choose your role:</label>
+                            <select name="Role" id="Role">
+                                <option value="user">User</option>
+                                <option value="supplier">Supplier</option>
+                            </select>
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox" onclick="setcookie()"> Remember me</label>
+                            <a href="/forgot-password">Forgot Password?</a>
+                        </div>
+                        <div class="butn">
+                            <button class="btn">Login</button>
+                        </div>
+                        <div class="login-register">
+                            <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                        </div>
+                        <br>
+                        <div class="messages">
+                            {% for msg in messages %}
+                                {{msg}}
+                            {% endfor %}
+                        </div>
+                    </form>
+                </div>
+                <div class="form-box register">
+                    <h2>Registration</h2>
+                    <form action="{% url 'register' %}" method="post">
+                        {% csrf_token %}
+                        <div class="input-box">
+                            <input type="text" name="Username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="mail" name="Email" required>
+                            <label>Enter your email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="password" name="Password" required>
+                            <label>Enter your password</label>
+                        </div>
+                        <div class="choose-role">
+                            <label for="role">Choose your role:</label>
+                            <select name="Role" id="role" required>
+                                <option value="user">User</option>
+                                <option value="supplier">Supplier</option>
+                            </select>                            
+                        </div>
+                        <div class="remember-forgot">
+                            <label><input type="checkbox" required> I agree to the terms & conditions</label>
+                        </div>
+                        <div class="butn">
+                            <button class="btn">Register</button>
+                        </div>
+                        <div class="login-register">
+                            <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                        </div>
+                        <br>
+                        <div class="messages">
+                            {% for msg in messages %}
+                                {{msg}}
+                            {% endfor %}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>        
+    </main>
+
+    <hr style="border: none; height: 2px; background-image: linear-gradient(to right, rgb(51, 255, 0), rgb(0, 119, 255));">
+
+    <footer id="footer" class="footer">
+
+        <section class="footer-section">
+            <div class="footer-img" style="font-size: 13px;">
+                <img src="/static/media/logo.png" width="70">
+                <p>Don't let the hunger bother you.</p>
+                <br>
+    
+                <div class="Social-links">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+    
+            <div class="useful-links" style="font-size: 13px;">
+                <h4>Useful Links</h4>
+                <br>
+                <li><a href="/">Home</a></li>
+                <li><a href="/About">About</a></li>
+            </div>
+    
+            <div class="Contact-us" style="font-size: 13px;">
+                <h4>Contact Us</h4>
+                <br>
+                  <p>Street no. 12, Ulhasnagar</p>
+                  <p>Mumbai</p>
+                  <p>India</p>
+                  <br>
+                  <p class="Phone"><strong>Phone:</strong> <span>+91 8159079694</span></p>
+                  <p><strong>Email:</strong> <span>Foodman@google.com</span></p>
+            </div>
+        </section>
+    
+        <div class="Copyright">
+          <p>© <span>Copyright</span> <strong class="px-1 sitename">FoodMan</strong> <span>All Rights Reserved</span></p>
+        </div>
+    
+    </footer>
+
+    <script src="/static/javascript/Sign in.js"></script>
+</body>
+
+</html>
