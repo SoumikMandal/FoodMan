@@ -21,7 +21,7 @@ from django.conf import settings
 
 def landing(request):
     Partners = partners.objects.all()
-    return render(request, "landing.html", {'Partners': Partners})
+    return render(request, "landing.html", {'partners': Partners})
 
 def about(request):
     return render(request, "about.html")
