@@ -31,5 +31,5 @@ urlpatterns = [
     path('reject-order/<str:order_id>/', views.reject_order, name='reject_order'),
 ]
 
-if settings.DEBUG:
+if settings.DEBUG is False:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
