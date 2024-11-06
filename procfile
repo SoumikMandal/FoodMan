@@ -1,1 +1,1 @@
-web: gunicorn in_office_delivery.wsgi
+web: gunicorn in_office_delivery.wsgi --log-file -
