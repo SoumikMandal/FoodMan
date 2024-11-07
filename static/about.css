@@ -146,4 +146,10 @@
         width: 250px;
         font-size: 12px;
     }
+
+    .fade-in {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
